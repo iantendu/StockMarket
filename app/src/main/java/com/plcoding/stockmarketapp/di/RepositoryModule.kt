@@ -19,21 +19,19 @@ abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun bindCompanyListingParser(
-        companyListingParser: CompanyListingParser
-    ):CSVParser<CompanyListing>
-
-    @Binds
-    @Singleton
-    abstract  fun bindStockRepository(
-        stockRepositoryImpl: StockRepositoryImpl
-    ):StockRepository
+    abstract fun bindCompanyListingsParser(
+        companyListingsParser: CompanyListingParser
+    ): CSVParser<CompanyListing>
 
     @Binds
     @Singleton
     abstract fun bindIntradayInfoParser(
         intradayInfoParser: IntradayInfoParser
-    ):CSVParser<IntradayInfo>
+    ): CSVParser<IntradayInfo>
 
-
+    @Binds
+    @Singleton
+    abstract fun bindStockRepository(
+        stockRepositoryImpl: StockRepositoryImpl
+    ): StockRepository
 }
